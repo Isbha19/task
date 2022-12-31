@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+    <!-- Header Start -->
+{% block content %}
+                <p style="margin-left:525px;top:35px;" class="section-title px-5"><span class="px-2">Login Page</span></p>
+
+                    <h1 style="padding-top:40px;padding-bottom:10px;" class="mb-4 text-center">Log In Now To Get Started</h1>
+
+  <div style="margin-left:375px;top:20px;padding-bottom:40px;"  class="col-lg-5">
+                    <div class="card border-0">
+                        <div class="card-header bg-secondary text-center p-4">
+                            <h1 class="text-white m-0">Login Now</h1>
+                        </div>
+                        <div class="card-body rounded-bottom bg-primary p-5">
+                            <form method="post">
+                                {% csrf_token %}
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control border-0 p-4" name="username" placeholder="Username" required="required" />
+                                </div>
+                                  <div class="form-group">
+                                    <input type="password" class="form-control border-0 p-4" name="password" placeholder="Password" required="required" />
+                                </div>
+
+                                <div>
+                                    <button class="btn btn-secondary btn-block border-0 py-3" type="submit">Submit</button>
+                                </div>
+                            </form>
+                             {% for a in messages %}
+ <h5 style="padding-top:20px;" class="text-center text-white m-0" >{{a}}</h5>
+   {% endfor %}
+                        </div>
+                    </div>
+
+                </div>
+
+<h5 style="padding-top:40px;" class="mb-4 text-center">  If you have not registered yet, please do so soon so that you can log in as a registered member!</h5>
+<div style="margin-left:575px;padding-bottom:30px;">
+<a href="{% url 'taskapp:register' %}" class="btn btn-primary mt-2 py-2 px-4">Register Now</a></div>
+
+{% endblock %}

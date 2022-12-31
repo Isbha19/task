@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+    <!-- Header Start -->
+{% block content %}
+    <div class="container-fluid bg-primary px-0 px-md-5 mb-5">
+        <div class="row align-items-center px-3">
+            <div class="col-lg-6 text-center text-lg-left">
+                <h4 class="text-white mb-4 mt-5 mt-lg-0">The School Store For All Your School Supplies</h4>
+                <h1 class="display-3 font-weight-bold text-white">Get your study materials in a streamlined manner</h1>
+                <p class="text-white mb-4">Get all the materials you need in one place, as we have categorized our school materials according to departments, so that you can find what you need quickly and easily.</p>
+                <a href="{% url 'taskapp:login' %}" class="btn btn-secondary mt-1 py-3 px-5">Login Now</a>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <img style="padding-top:10px;" class="img-fluid mt-5" src="{% static 'img/college student.png' %}" alt=""  width="420px">
+
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Facilities Start -->
+    <div class="container-fluid pt-5">
+        <div class="container pb-3">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="flaticon-050-fence h1 font-weight-normal text-primary mb-3"></i>
+                        <div class="pl-4">
+                            <h4>Books</h4>
+                            <p class="m-0">Providing students with books of their respective departments for easy access.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="flaticon-022-drum h1 font-weight-normal text-primary mb-3"></i>
+                        <div class="pl-4">
+                            <h4>Previous Question Papers</h4>
+                            <p class="m-0">You can refer from the past papers from the question papers provided by us.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="flaticon-030-crayons h1 font-weight-normal text-primary mb-3"></i>
+                        <div class="pl-4">
+                            <h4>Stationaries</h4>
+                            <p class="m-0">You will get stationaries of your choice with the best rates and with the best quality!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="flaticon-017-toy-car h1 font-weight-normal text-primary mb-3"></i>
+                        <div class="pl-4">
+                            <h4>Guides</h4>
+                            <p class="m-0">We provide guides for your each subjects so that you can learn easier with our simple to learn guides</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="flaticon-025-sandwich h1 font-weight-normal text-primary mb-3"></i>
+                        <div class="pl-4">
+                            <h4>Calculator</h4>
+                            <p class="m-0">If you sign up for any kind of math class, expect to invest in the right calculator for the job.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="flaticon-047-backpack h1 font-weight-normal text-primary mb-3"></i>
+                        <div class="pl-4">
+                            <h4>Printed Papers</h4>
+                            <p class="m-0">Keep a stock of paper on hand for printing out assignments. Don't be late turning in a paper.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facilities Start -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img class="img-fluid rounded mb-5 mb-lg-0" src="{% static 'img/student1.jpg' %}" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <p class="section-title pr-5"><span class="pr-2">Learn About Us</span></p>
+                    <h1 class="mb-4">Best School Store for School Students</h1>
+                    <p>With our school materials categorized by department, you can easily find what you need, as you can find all the study materials you need in one place.</p>
+                    <div class="row pt-2 pb-4">
+
+                        <div class="col-6 col-md-8">
+                            <ul class="list-inline m-0">
+                                <li class="py-2 border-top border-bottom"><i class="fa fa-check text-primary mr-3"></i>Trusted school store</li>
+                                <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i>100% refund policy available</li>
+                                <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i>Fast delivery to your doorstep</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+{% endblock %}

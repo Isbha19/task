@@ -1,0 +1,70 @@
+#success_message{ display: none;}
+
+
+   .demo {
+	  background-color:rgb(0,0,0,0.5);
+	  width:500px;
+	  margin:auto;
+	  padding:10px;
+	  }
+	  .name {
+	  margin-left:25px;
+	  margin-top:33px;
+	  width:125px;
+	  color:white;
+	 font-size:23px;
+	 font-weight:700;
+	 display:block;
+	 }
+	 .namei  {
+	  position:relative;
+      left:170px;
+      top:-47px;
+      line-height:37px;
+	  border-radius:6px;
+	  padding:0 22px;
+	  size=10px;
+	  font-size:16px;
+	  text-transform:capitalize;
+	  display:block;
+	  }
+	    .pwd {
+	  position:relative;
+	  margin-left:25px;
+	  top:-40px;
+	  width:200px;
+	  color:white;
+	 font-size:23px;
+	 font-weight:700;
+	 display:block;
+	 }
+	 .pwdi {
+	  position:relative;
+      left:170px;
+      top:-87px;
+      line-height:37px;
+	  border-radius:6px;
+	  width:200px;
+	  padding:0 22px;
+	  font-size:16px;
+	  }
+
+	 .confirmpwdi {
+	  position:relative;
+      left:170px;
+      top:-70px;
+      line-height:37px;
+	  border-radius:6px;
+	  width:200px;
+	  padding:0 22px;
+	  font-size:16px;
+	  }
+	   .submit {
+	  position:relative;
+	  margin-left:235px;
+	  top:-50px;
+	  width:80px;
+	  color:black;
+	 font-size:17px;
+	 font-weight:100;
+	 display:block; }

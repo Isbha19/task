@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+    <!-- Header Start -->
+{% block content %}
+
+  <p style="margin-left:525px;top:35px;" class="section-title px-5"><span class="px-2">Order Page</span></p>
+
+                    <h1 style="padding-top:40px;padding-bottom:10px;" class="mb-4 text-center">Fill in the below details to complete your order</h1>
+<div style="margin-left:375px;top:20px;padding-bottom:40px;"  class="col-lg-5">
+                    <div class="card border-0">
+                        <div class="card-header bg-secondary text-center p-4">
+                            <h1 class="text-white m-0">Order Now</h1>
+                        </div>
+                        <div class="card-body rounded-bottom bg-primary p-5">
+                            <form>
+  <div class="form-group text-white m-0">
+      <label ><b>Name</b></label>
+    <input type="text" class="form-control" name="name" required="required" placeholder="Enter your name">
+  </div>
+                                 <div style="padding-top:20px;" class="form-group text-white m-0">
+      <label><b>Date of Birth</b></label>
+    <input type="date" class="form-control" name="dob" required="required" placeholder="Enter your name">
+  </div>
+ <div style="padding-top:20px;" class="form-group text-white m-0">
+      <label><b>Age</b></label>
+    <input type="number" class="form-control" name="Age" required="required" placeholder="Enter your Age">
+  </div>
+ <div style="padding-top:20px;" class="form-group text-white m-0">
+      <label><b>Gender</b></label><br>
+    <input type="radio" required="required" name="male" value="Male">
+<label>Male</label><br>
+<input type="radio" required="required" name="female" value="Female">
+<label>Female</label><br>
+  </div>
+                                 <div style="padding-top:15px;" class="form-group text-white m-0">
+      <label ><b>Phone number</b></label>
+    <input type="tel" class="form-control" placeholder="Enter your phone number" required="required"">
+  </div>
+                                 <div style="padding-top:20px;" class="form-group text-white m-0">
+      <label><b>Mail Address</b></label>
+    <input type="email" class="form-control" required="required" placeholder="Enter your Email">
+  </div>
+                                 <div style="padding-top:15px;" class="form-group text-white m-0">
+      <label ><b>Department</b></label>
+    <select class="form-control" name="department" required="required">
+      <option>Computer Science</option>
+      <option>Commerce</option>
+      <option>Food Technology</option>
+      <option>Geology</option>
+      <option>Physics</option>
+    </select>
+  </div>
+<div style="padding-top:15px;" class="form-group text-white m-0">
+      <label ><b>Courses</b></label>
+     {% if department == Commerce  %}
+    <div data-show-if="department:Commerce">
+    <select class="form-control" required="required">
+      <option>Accountancy</option>
+      <option>Business studies</option>
+      <option>Economics</option>
+      <option>Mathematics</option>
+      <option>English</option>
+    </select>
+  </div>
+                                 {% elif department == Physics  %}
+    <div data-show-if="department:Physics">
+                                <select class="form-control" required="required">
+      <option>A</option>
+      <option>B</option>
+      <option>Economics</option>
+      <option>Mathematics</option>
+      <option>English</option>
+    </select>
+  </div>
+                        {% elif department == Geology  %}
+
+
+    <select class="form-control" required="required">
+      <option>For Enquiry</option>
+      <option>Place Order</option>
+      <option>Return</option>
+      <option>Exchange</option>
+
+    </select>
+  </div>
+                        {% else  %}
+        <select class="form-control" required="required">
+      <option>No dept selected</option></select>
+ {% endif %}
+                                  <div style="padding-top:20px;" class="form-group text-white m-0">
+      <label><b>Materials needed</b></label><br>
+    <input type="checkbox">
+<label>Books</label><br>
+<input type="checkbox">
+<label>Guide</label><br>
+<input type="checkbox">
+<label>Stationary</label><br><input type="checkbox">
+<label>Calculator</label><br><input type="checkbox">
+<label>Guide</label><br>
+                                      <input type="checkbox">
+<label>Assignment papers</label><br>
+  </div>
+                                <div style="padding-top:20px;float: left;">
+                                  <button style=width:186px;" class="btn btn-secondary btn-block  py-3" type="submit">Submit</button>
+                                </div>
+                            </form>
+                                  <div style="padding-top:20px;float: right;">
+                                                                    <a href="{% url 'taskapp:logout' %}" style="width:186px;" class="btn btn-secondary btn-block  py-3" type="submit">Logout</a>
+                                </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+{% endblock %}
